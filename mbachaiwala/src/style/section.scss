@@ -1,0 +1,65 @@
+@import "App";
+
+section{
+    >div{
+        display: flex;
+        flex-direction: column;
+        gap: 3vw;
+        align-items: center;
+        h1{
+            font-size: 4rem;
+            line-height: 1;
+            width: 80%;
+            font-family: $heading;
+        }
+        p{
+            font-family: $text;
+            line-height: 1.7;
+            font-size: 1.5rem;
+            
+        }
+        button{
+            font-size: 17px;
+            border-radius: 10px;
+            width: fit-content;
+            font-family: $text;
+            letter-spacing: 2px;
+            padding: .7rem 2rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            &:hover{
+                transform: skewX(-20deg);
+                // background: #000;
+            }
+        }
+    }
+}
+
+
+@media  screen and (max-width:500px) {
+    html{
+        font-size: 40%;
+    }
+    section{
+        padding: 0;
+        >div{
+            width: 100%;
+            h1{
+                width: 100%;
+                font-size:4rem;
+            }
+            p{
+                width: 100%;
+                font-size: 1.6rem;
+                line-height: 1.1;
+            }
+            button{
+                justify-content: center;
+                display: flex;
+                font-size:1rem;
+                word-wrap: nowrap;
+                padding: .5rem 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+@import "App";
+
+
+
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 99;
+  justify-content: space-between;
+}
+.btu{
+  font-size: 1.7rem;
+  border-radius: 10px;
+  word-wrap: nowrap;
+  white-space: nowrap;
+  width: fit-content;
+  position: fixed;
+  font-family: $text;
+  letter-spacing: 2px;
+  padding: 0.7rem 2rem;
+ top: 5%;
+ z-index: 99;
+ right: 5%;
+  font-weight: 700;
+  background: #803415;
+  color: #f7e10a;
+  &:hover {
+    transform: skewX(-20deg);
+    // background: #000;
+  }
+}
+
+.mouse {
+  animation: anime infinite alternate 1s;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+}
+
+@keyframes anime {
+  to {
+    bottom: 3%;
+  }
+  from {
+    bottom: 5%;
+  }
+}
+
+
+@media screen and (max-width:500px){
+    html{
+      font-size:40%;
+    }
+    .btu{
+        top:90%;
+        right: 50%;
+        height: fit-content;
+      }
+      .mouse{
+        left: 45%;
+        bottom: 0%;
+      }
+
+      @keyframes anime {
+        to {
+          bottom: 20%;
+        }
+        from {
+          bottom: 18%;
+        }
+      }
+
+}
